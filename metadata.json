@@ -1,0 +1,6 @@
+{
+  "name": "Rodriguez Peralta - Ventas y Administración",
+  "description": "Sistema comercial dual con vista de PC para Administrador (ventas, inventario, créditos, cobros, facturación) y vista Móvil para Vendedores (ventas, clientes, facturas, cobros) sincronizados con Supabase.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

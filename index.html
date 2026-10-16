@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>RODRIGUEZ PERALTA - Ventas y Administración</title>
+    <meta name="description" content="Sistema comercial dual con vista de PC para Administrador (ventas, inventario, créditos, cobros, facturación) y vista Móvil para Vendedores (ventas, clientes, facturas, cobros) sincronizados con Supabase." />
+    <meta property="og:title" content="RODRIGUEZ PERALTA - Ventas y Administración" />
+    <meta property="og:description" content="Sistema comercial dual con vista de PC para Administrador (ventas, inventario, créditos, cobros, facturación) y vista Móvil para Vendedores (ventas, clientes, facturas, cobros) sincronizados con Supabase." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#123b2a" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+      /* Estilos para impresión en hoja A4 y térmica JACL-P280 (80mm) */
+      @page { size: A4; margin: 10mm; }
+      @page thermal { size: 80mm auto; margin: 0; }
+      body.print-thermal { page: thermal; margin: 0 !important; padding: 0 !important; }
+
+      @media print {
+        body { background: white !important; color: #000 !important; }
+        .no-print, header, nav, aside, button, .sync-bar { display: none !important; }
+        #printArea { display: block !important; }
+
+        body.print-thermal { width: 80mm !important; }
+        body.print-thermal #printArea {
+          display: block !important;
+          box-sizing: border-box !important;
+          width: 72mm !important;
+          max-width: 72mm !important;
+          margin: 0 auto !important;
+          padding: 2mm 1mm !important;
+          font-family: Arial, Helvetica, sans-serif !important;
+          font-size: 9px !important;
+          line-height: 1.25 !important;
+          color: #000 !important;
+          text-align: center !important;
+        }
+        body.print-thermal #printArea table {
+          display: table !important;
+          width: 100% !important;
+          border-collapse: collapse !important;
+          table-layout: fixed !important;
+          font-size: 8px !important;
+        }
+        body.print-thermal #printArea th,
+        body.print-thermal #printArea td {
+          padding: 2px 1px !important;
+          border: 0 !important;
+          border-bottom: 1px dashed #777 !important;
+          text-align: left !important;
+        }
+        body.print-thermal #printArea .company-logo {
+          width: 42mm !important;
+          max-height: 24mm !important;
+          object-fit: contain !important;
+          margin: 0 auto 2mm !important;
+          display: block !important;
+        }
+        body.print-thermal #printArea .total-line {
+          font-size: 13px !important;
+          font-weight: bold !important;
+          text-align: right !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-500 selection:text-white">
+    <div id="root"></div>
+    <div id="printArea" class="hidden"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
